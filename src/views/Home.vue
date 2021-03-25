@@ -68,8 +68,8 @@ export default {
 
 <style>
 
-/* body {
+body {
   background-image: url('https://png.pngtree.com/png-vector/20191129/ourmid/pngtree-hand-drawn-fast-food-doodle-vector-set-of-fast-food-vector-png-image_2046737.jpg');
-} */
+}
 
 </style>
