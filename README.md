@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# Ojan-Online-Jajan--Customer
-=======
 # ecommerce-customer-client
 
 ## Project setup
@@ -25,4 +22,3 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
->>>>>>> ecba02534a24467e1f3746759a1b65ce1c1dfac2
