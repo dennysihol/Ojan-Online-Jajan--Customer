@@ -1,0 +1,62 @@
+<template>
+  <div>
+    <Navbar></Navbar>
+    <div class="container d-flex justify-content-center for-register">
+        <form class="form-register">
+            <img class="mb-4" src="@/assets/OJAN_free-file.png" alt="" style="margin-top:10px">
+            <h1 class="h3 mb-3 font-weight-normal">Register</h1>
+            <label for="inputEmail" class="sr-only">Email address</label>
+            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" v-model="email" required autofocus>
+            <br>
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password" v-model="password" required>
+            <br><br>
+            <button class="btn btn-lg btn-primary btn-block" type="submit" @click.prevent="register">Register</button>
+            <br>
+            <a href="#" @click.prevent="goLogin" style="cursor: pointer;"><p>Already Have Account?</p></a>
+            <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
+        </form>
+      </div>
+  </div>
+</template>
+
+<script>
+import Navbar from '@/components/Navbar.vue'
+import router from '../router'
+
+export default {
+  name: 'Register',
+  components: {
+    Navbar
+  },
+  data () {
+    return {
+      email: '',
+      password: ''
+    }
+  },
+  methods: {
+    goLogin () {
+      router.push('/login')
+    },
+    register () {
+      const user = {
+        email: this.email,
+        password: this.password
+      }
+      this.$store.dispatch('register', user)
+    }
+  }
+}
+</script>
+
+<style scoped>
+
+.for-register {
+    background-color: #d8bbff;
+    width: 30%;
+    margin-top: 5%;
+    border-radius: 10px;
+}
+
+</style>
